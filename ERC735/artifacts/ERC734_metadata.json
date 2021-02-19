@@ -1,0 +1,200 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "claimId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "claimType",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "scheme",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "signature",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
+					}
+				],
+				"name": "ClaimAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "claimId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "claimType",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "scheme",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "signature",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "uri",
+						"type": "string"
+					}
+				],
+				"name": "ClaimRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_claimType",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_issuer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_signatureType",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_claim",
+						"type": "bytes"
+					},
+					{
+						"internalType": "string",
+						"name": "_uri",
+						"type": "string"
+					}
+				],
+				"name": "addClaim",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_claimId",
+						"type": "bytes32"
+					}
+				],
+				"name": "removeClaim",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/ERC735/IERC735.sol": "ERC734"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/contracts/ERC735/IERC735.sol": {
+			"keccak256": "0x863987040e63e2f53f0bee3f963c6f1a7622dda645af6d35b239f1c3870057c3",
+			"urls": [
+				"bzz-raw://d56e32ad83f09c6811196b35c42a96cce23ed12f05463e0700ff22118f4369c7",
+				"dweb:/ipfs/QmPQoXMDJtgwChY59fYCBKE6HKKYDQeB1aFrGKiiqLLyJu"
+			]
+		}
+	},
+	"version": 1
+}

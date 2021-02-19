@@ -1,0 +1,209 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"addClaim(uint256,address,uint256,bytes,bytes,string)": "0607f937",
+			"removeClaim(bytes32)": "4eee424a"
+		}
+	},
+	"abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "claimId",
+					"type": "bytes32"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "claimType",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "scheme",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "issuer",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "signature",
+					"type": "bytes"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "data",
+					"type": "bytes"
+				},
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				}
+			],
+			"name": "ClaimAdded",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "claimId",
+					"type": "bytes32"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "claimType",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "scheme",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "issuer",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "signature",
+					"type": "bytes"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "data",
+					"type": "bytes"
+				},
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				}
+			],
+			"name": "ClaimRemoved",
+			"type": "event"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_claimType",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_issuer",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_signatureType",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bytes",
+					"name": "_signature",
+					"type": "bytes"
+				},
+				{
+					"internalType": "bytes",
+					"name": "_claim",
+					"type": "bytes"
+				},
+				{
+					"internalType": "string",
+					"name": "_uri",
+					"type": "string"
+				}
+			],
+			"name": "addClaim",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "_claimId",
+					"type": "bytes32"
+				}
+			],
+			"name": "removeClaim",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "success",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

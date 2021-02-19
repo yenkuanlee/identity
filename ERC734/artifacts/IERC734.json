@@ -1,0 +1,291 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"getKey(bytes32)": "12aaac70",
+			"getKeysByPurpose(uint256)": "9010f726",
+			"keyHasPurpose(bytes32,uint256)": "d202158d",
+			"setData(bytes32,bytes)": "7f23690c"
+		}
+	},
+	"abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "executionId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "bool",
+					"name": "approved",
+					"type": "bool"
+				}
+			],
+			"name": "Approved",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "executionId",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "value",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "data",
+					"type": "bytes"
+				}
+			],
+			"name": "Executed",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "executionId",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "value",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "data",
+					"type": "bytes"
+				}
+			],
+			"name": "ExecutionRequested",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "key",
+					"type": "bytes32"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "purpose",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "keyType",
+					"type": "uint256"
+				}
+			],
+			"name": "KeyAdded",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "key",
+					"type": "bytes32"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "purpose",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "keyType",
+					"type": "uint256"
+				}
+			],
+			"name": "KeyRemoved",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "purpose",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "number",
+					"type": "uint256"
+				}
+			],
+			"name": "KeysRequiredChanged",
+			"type": "event"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "_key",
+					"type": "bytes32"
+				}
+			],
+			"name": "getKey",
+			"outputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "purposes",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "uint256",
+					"name": "keyType",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_purpose",
+					"type": "uint256"
+				}
+			],
+			"name": "getKeysByPurpose",
+			"outputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "keys",
+					"type": "bytes32[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "_key",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "uint256",
+					"name": "purpose",
+					"type": "uint256"
+				}
+			],
+			"name": "keyHasPurpose",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "exists",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "key",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "bytes",
+					"name": "value",
+					"type": "bytes"
+				}
+			],
+			"name": "setData",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

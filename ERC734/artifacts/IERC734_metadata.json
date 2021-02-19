@@ -1,0 +1,316 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "executionId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "Approved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "executionId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "Executed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "executionId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "ExecutionRequested",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "purpose",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "KeyAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "purpose",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "KeyRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "purpose",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "KeysRequiredChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"name": "getKey",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "purposes",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_purpose",
+						"type": "uint256"
+					}
+				],
+				"name": "getKeysByPurpose",
+				"outputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "keys",
+						"type": "bytes32[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "purpose",
+						"type": "uint256"
+					}
+				],
+				"name": "keyHasPurpose",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "exists",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "value",
+						"type": "bytes"
+					}
+				],
+				"name": "setData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Contract to manage keys that can execute external smart contracts. ERC 165 interface id: 0x?",
+			"events": {
+				"Approved(uint256,bool)": {
+					"details": "Emitted when `approve` is called"
+				},
+				"Executed(uint256,address,uint256,bytes)": {
+					"details": "Emitted when an execution is executed"
+				},
+				"ExecutionRequested(uint256,address,uint256,bytes)": {
+					"details": "Emitted when a execution is requested"
+				},
+				"KeyAdded(bytes32,uint256,uint256)": {
+					"details": "Emitted when a key is added"
+				},
+				"KeyRemoved(bytes32,uint256,uint256)": {
+					"details": "Emitted when a key is removed"
+				},
+				"KeysRequiredChanged(uint256,uint256)": {
+					"details": "Emitted when an `changeKeysRequired` is called"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"getKey(bytes32)": {
+					"details": "Gets the data for a key"
+				},
+				"getKeysByPurpose(uint256)": {
+					"details": "Return an array of keys that fit a given purpose"
+				},
+				"keyHasPurpose(bytes32,uint256)": {
+					"details": "Returns TRUE if a key has a certain purpose"
+				},
+				"setData(bytes32,bytes)": {
+					"details": "Sets data at a given `key`. SHOULD only be callable by the owner of the contract set via ERC173. Emits a {DataChanged} event."
+				}
+			},
+			"title": "ERC734 Key Manager",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/ERC734/IERC734.sol": "IERC734"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/contracts/ERC734/IERC734.sol": {
+			"keccak256": "0x01b98453cc7f2e83dfda9f7c16c064a8fe95dcb36baa9354eda68d5db08c76bd",
+			"license": "CC0-1.0",
+			"urls": [
+				"bzz-raw://2bd8aaa768e2bfcd9c6292b844478bceed68ac1f9aa35619aa79e227288bbce2",
+				"dweb:/ipfs/QmTuRPjS6wrGDXZdgCbSBqXeSsyDpJQ5r5icF3Ap4n2Z7w"
+			]
+		}
+	},
+	"version": 1
+}

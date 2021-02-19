@@ -1,0 +1,206 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "purposes",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "KeyRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "purposes",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "KeySet",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "addManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"name": "getKey",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_purposes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_keyType",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_purpose",
+						"type": "uint256"
+					}
+				],
+				"name": "keyHasPurpose",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"name": "removeKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "removeManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_purposes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "setKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/identity/ERC734/ERC734KeyManager.sol": "ERC734KeyManager"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/contracts/identity/ERC734/ERC734KeyManager.sol": {
+			"keccak256": "0xd4fc682b60e2d80c51364437c34e94bf999ebddfcb8227758fe943c7d07500d1",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://51f1d31d842fbefb3b195af15cb421243e183d8713a55fc1ae5755996f731539",
+				"dweb:/ipfs/QmULuybEDDU4P65qoy8zVyWhH49gpLyeu6hPPgrmPfXaku"
+			]
+		}
+	},
+	"version": 1
+}

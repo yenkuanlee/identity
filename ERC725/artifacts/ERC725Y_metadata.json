@@ -1,0 +1,435 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "value",
+						"type": "bytes"
+					}
+				],
+				"name": "DataChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "purposes",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "KeyRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "purposes",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "KeySet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "addManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "_value",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"name": "getKey",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_purposes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_keyType",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_purpose",
+						"type": "uint256"
+					}
+				],
+				"name": "keyHasPurpose",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"name": "removeKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "removeManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_value",
+						"type": "bytes"
+					}
+				],
+				"name": "setData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_purposes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_keyType",
+						"type": "uint256"
+					}
+				],
+				"name": "setKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Fabian Vogelsteller <fabian@lukso.network>",
+			"details": "Contract module which provides the ability to set arbitrary key value sets that can be changed over time. It is intended to standardise certain keys value pairs to allow automated retrievals and interactions from interfaces and other smart contracts. `setData` should only be callable by the owner of the contract set via ERC173.",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"_newOwner": "the owner of the contract."
+					}
+				},
+				"getData(bytes32)": {
+					"params": {
+						"_key": "the key which value to retrieve"
+					},
+					"returns": {
+						"_value": "The date stored at the key"
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"setData(bytes32,bytes)": {
+					"params": {
+						"_key": "the key which value to retrieve",
+						"_value": "the bytes to set."
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}. Time complexity O(1), guaranteed to always use less than 30 000 gas."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"title": "ERC725 Y data store",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": "Sets the owner of the contract",
+				"getData(bytes32)": {
+					"notice": "Gets data at a given `key`"
+				},
+				"setData(bytes32,bytes)": {
+					"notice": "Sets data at a given `key`"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/identity/ERC725/ERC725Y.sol": "ERC725Y"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2",
+				"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb"
+			]
+		},
+		"@openzeppelin/contracts/introspection/ERC165.sol": {
+			"keccak256": "0x24141d2f6b98d4cb77a8936eae8cbaad2e261d9062bdc08036096f4550092501",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b710eb003944777135f027500a5a57b479fe857849f5f467c1ef9687401e3c95",
+				"dweb:/ipfs/QmcELzi6KRzAs3DXwxdsoKWRJ13KSeipKQsJgD3unctdZM"
+			]
+		},
+		"@openzeppelin/contracts/introspection/IERC165.sol": {
+			"keccak256": "0xf70bc25d981e4ec9673a995ad2995d5d493ea188d3d8f388bba9c227ce09fb82",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd970f51e3a77790c2f02b5b1759827c3b897c3d98c407b3631e8af32e3dc93c",
+				"dweb:/ipfs/QmPF85Amgbqjk3SNZKsPCsqCw8JfwYEPMnnhvMJUyX58je"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
+				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		},
+		"localhost/contracts/identity/ERC725/ERC725Y.sol": {
+			"keccak256": "0x118bf77c4254050d277bb17ab8129562cf25cdf3199a8314a70e7e8e99dde561",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://aa06b84b847d8b555b4f4a6fe64b880ac1de8cda55b1fb9f2378ba6fca59b0b7",
+				"dweb:/ipfs/Qmd5XVnoEuat4YAGUdr2dgsFWFSrKJ53wwUA3DdePorW8G"
+			]
+		},
+		"localhost/contracts/identity/ERC725/IERC725Y.sol": {
+			"keccak256": "0x78cc9051b327822659ab2b9f080b22fa2570c5f2ccdaa60369abe7eb4132485b",
+			"license": "CC0-1.0",
+			"urls": [
+				"bzz-raw://4acb2a4f942b16c598f531b8d8f2c1846ae15f3fdd22d4f1d72b838470db16c2",
+				"dweb:/ipfs/Qmd2dBBTmviQ7x6nWpQwTmT4dV7NcvgsGJZtRZCLqsoMuE"
+			]
+		},
+		"localhost/contracts/identity/ERC734/ERC734KeyManager.sol": {
+			"keccak256": "0xd4fc682b60e2d80c51364437c34e94bf999ebddfcb8227758fe943c7d07500d1",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://51f1d31d842fbefb3b195af15cb421243e183d8713a55fc1ae5755996f731539",
+				"dweb:/ipfs/QmULuybEDDU4P65qoy8zVyWhH49gpLyeu6hPPgrmPfXaku"
+			]
+		}
+	},
+	"version": 1
+}
